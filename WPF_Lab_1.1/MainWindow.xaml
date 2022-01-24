@@ -10,7 +10,7 @@
         <Button x:Name="Set_Name" Content="Set Name" HorizontalAlignment="Left" Margin="52,76,0,0" VerticalAlignment="Top" Click="Set_Name_Click" Height="70" Width="112"/>
         <Button x:Name="Ret_Name" Content="Ret Name" HorizontalAlignment="Left" Margin="52,151,0,0" VerticalAlignment="Top" Click="Ret_Name_Click" Height="66" Width="112"/>
         <Label x:Name="label" Content="" HorizontalAlignment="Left" Margin="201,153,0,0" VerticalAlignment="Top" Width="199"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="201,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Height="33"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="201,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Height="33" TextChanged="textBox_TextChanged"/>
 
     </Grid>
 </Window>

@@ -23,6 +23,8 @@ namespace WPF_Lab_1._1
         public MainWindow()
         {
             InitializeComponent();
+            Set_Name.IsEnabled = false;
+            Ret_Name.IsEnabled = false;
         }
 
         private void Set_Name_Click(object sender, RoutedEventArgs e)
@@ -32,6 +34,7 @@ namespace WPF_Lab_1._1
                 System.IO.StreamWriter sw = new System.IO.StreamWriter("F:\\username.txt");
                 sw.WriteLine (textBox.Text);
                 sw.Close();
+                Ret_Name.IsEnabled = true;
             }
             catch (Exception ex)
             {
@@ -51,6 +54,11 @@ namespace WPF_Lab_1._1
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Set_Name.IsEnabled = true;
         }
     }
 }
