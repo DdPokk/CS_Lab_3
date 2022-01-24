@@ -60,5 +60,10 @@ namespace WPF_Lab_1._1
         {
             Set_Name.IsEnabled = true;
         }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            myTextBox.Text = DateTime.Now.ToString();
+        }
     }
 }

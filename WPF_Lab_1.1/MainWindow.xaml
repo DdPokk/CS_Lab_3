@@ -6,11 +6,12 @@
         xmlns:local="clr-namespace:WPF_Lab_1._1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Canvas>
         <Button x:Name="Set_Name" Content="Set Name" HorizontalAlignment="Left" Margin="52,76,0,0" VerticalAlignment="Top" Click="Set_Name_Click" Height="70" Width="112"/>
         <Button x:Name="Ret_Name" Content="Ret Name" HorizontalAlignment="Left" Margin="52,151,0,0" VerticalAlignment="Top" Click="Ret_Name_Click" Height="66" Width="112"/>
         <Label x:Name="label" Content="" HorizontalAlignment="Left" Margin="201,153,0,0" VerticalAlignment="Top" Width="199"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="201,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Height="33" TextChanged="textBox_TextChanged"/>
-
-    </Grid>
+        <Button Canvas.Left="10" Canvas.Top="10" Content="Click Me" Height="23" Name="button3" Width="75" Click="button3_Click"/>
+        <TextBox x:Name="myTextBox" Canvas.Left="90" Canvas.Top="12" Width="170"/>
+    </Canvas>
 </Window>
