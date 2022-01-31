@@ -7,21 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
-        <ToolBar Height="26" Name="toolBar1" Width="200" DockPanel.Dock="Top" >
-            <Button Click="Button_Click">Bold</Button>
-            <Button Click="Button_Click_1">Italic</Button>
-            <Slider Name="Slider1" Minimum="2" Maximum="72" Width="100" ValueChanged="Slider1_ValueChanged"></Slider>
-        </ToolBar>
-        <Grid Name="grid1" Height="260" Width="569">
+        <Grid DockPanel.Dock="Bottom" Height="380">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="150" />
                 <ColumnDefinition Width="5" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <ListBox Grid.Column="0" Name="listBox1" SelectionChanged="listBox1_SelectionChanged"></ListBox>
-            <GridSplitter Name="gridSplitter1" Margin="0" Width="5" Grid.Column="1" HorizontalAlignment="Left" />
-            <RichTextBox Grid.Column="2" Name="richTextBox1" />
-            </Grid>
-
+            <RichTextBox Grid.Column="2" Name="richTextBox1" Height="Auto" Width="Auto" />
+            <ListBox Grid.Column="0" Name="listBox1" Height="Auto" Width="Auto" SelectionChanged="listBox1_SelectionChanged_1"/>
+            <GridSplitter Grid.Column="1" Name="gridSplitter1" Width="5" Height="Auto" />
+        </Grid>
+        <Grid DockPanel.Dock="Top">
+            <ToolBar HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="800">
+                <Button Click="Button_Click">Bold</Button>
+                <Button Click="Button_Click_1">Italic</Button>
+                <Slider Name="Slider1" Minimum="2" Maximum="72" Width="100" Height="22" VerticalAlignment="Top" ValueChanged="Slider1_ValueChanged"></Slider>
+            </ToolBar>
+        </Grid>
     </DockPanel>
 </Window>

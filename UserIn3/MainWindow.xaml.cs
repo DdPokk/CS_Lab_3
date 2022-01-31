@@ -41,17 +41,20 @@ namespace UserIn3
 
         private void Slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-        ValueChanged:
+                richTextBox1.Selection.ApplyPropertyValue(FontSizeProperty, Slider1.Value.ToString()); 
+        }
+           
+
+        private void listBox1_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
             try
             {
-                richTextBox1.Selection.ApplyPropertyValue(FontSizeProperty, Slider1.Value.ToString());
+                richTextBox1.Selection.ApplyPropertyValue(FontFamilyProperty, listBox1.SelectedItem);
             }
-            catch { }
-        }
+            catch
+            {
 
-        private void listBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            richTextBox1.Selection.ApplyPropertyValue(FontFamilyProperty, ((ListBoxItem)listBox1.SelectedItem).FontFamily);
+            }
         }
     }
 }
